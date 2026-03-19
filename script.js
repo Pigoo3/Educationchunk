@@ -12,9 +12,17 @@ function generateMap() {
 
     map = L.map('map').setView([0, 0], 3);
 
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 6
-    }).addTo(map);
+    // Fond de carte vide (Minecraft-style)
+L.tileLayer('', {
+    maxZoom: 6
+}).addTo(map);
+
+    // Ajout d'un fond gris clair pour simuler une carte Minecraft
+L.rectangle([[-1000, -1000], [1000, 1000]], {
+    color: "#888",
+    fillColor: "#ccc",
+    fillOpacity: 0.5
+}).addTo(map);
 
     // Génération pseudo-aléatoire basée sur le seed
     function rand(x, z) {
