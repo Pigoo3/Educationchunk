@@ -1,64 +1,41 @@
-* {
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ChunkEducation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #f5f5f5;
-}
+<body>
 
-header {
-    background: #222;
-    padding: 8px 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
+<header>
+    <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/32/Education_Edition_Logo.png" class="logo">
 
-header img.logo {
-    height: 32px;
-}
+    <input type="number" id="seedInput" placeholder="Seed">
+    <button onclick="generateMap()">Générer</button>
 
-header input[type="number"] {
-    width: 120px;
-    padding: 4px 6px;
-    border-radius: 4px;
-    border: 1px solid #555;
-    background: #111;
-    color: #f5f5f5;
-}
+    <label><input type="checkbox" id="biomes" checked> Biomes</label>
+    <label><input type="checkbox" id="villages" checked> Villages</label>
+    <label><input type="checkbox" id="temples" checked> Temples</label>
 
-header button {
-    padding: 5px 10px;
-    border-radius: 4px;
-    border: none;
-    background: #3b82f6;
-    color: white;
-    cursor: pointer;
-}
+    <label><input type="checkbox" id="ores" checked> Minerais</label>
+    <label><input type="checkbox" id="nether" checked> Nether</label>
+    <label><input type="checkbox" id="strongholds" checked> Strongholds</label>
 
-header button:hover {
-    background: #2563eb;
-}
+    <label><input type="checkbox" id="end" checked> End</label>
+    <label><input type="checkbox" id="geodes" checked> Géodes</label>
+    <label><input type="checkbox" id="mineshafts" checked> Mineshafts</label>
 
-label {
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    gap: 3px;
-}
+    <label><input type="checkbox" id="darkmode"> Mode sombre</label>
 
-#coords {
-    margin-left: auto;
-    font-size: 12px;
-    opacity: 0.8;
-    white-space: nowrap;
-}
+    <div id="coords">X: 0 | Z: 0</div>
+</header>
 
-#map {
-    width: 100vw;
-    height: calc(100vh - 60px);
-}
+<div id="map"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
