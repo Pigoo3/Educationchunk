@@ -2,29 +2,40 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mini Chunkbase - Minecraft Education</title>
+    <title>ChunkEducation</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
+
 <body>
 
-    <h1>Mini Chunkbase – Minecraft Education</h1>
+<header>
+    <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/32/Education_Edition_Logo.png" class="logo">
 
-    <div id="controls">
-        <input type="number" id="seedInput" placeholder="Entre un seed">
-        <button onclick="generateMap()">Générer</button>
+    <input type="number" id="seedInput" placeholder="Seed">
+    <button onclick="generateMap()">Générer</button>
 
-        <div id="layers">
-            <label><input type="checkbox" id="villages" checked> Villages</label>
-            <label><input type="checkbox" id="temples" checked> Temples</label>
-            <label><input type="checkbox" id="biomes" checked> Biomes</label>
-        </div>
-    </div>
+    <label><input type="checkbox" id="biomes" checked> Biomes</label>
+    <label><input type="checkbox" id="villages" checked> Villages</label>
+    <label><input type="checkbox" id="temples" checked> Temples</label>
 
-    <div id="map"></div>
+    <label><input type="checkbox" id="ores" checked> Minerais</label>
+    <label><input type="checkbox" id="nether" checked> Nether</label>
+    <label><input type="checkbox" id="strongholds" checked> Strongholds</label>
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <label><input type="checkbox" id="end" checked> End</label>
+    <label><input type="checkbox" id="geodes" checked> Géodes</label>
+    <label><input type="checkbox" id="mineshafts" checked> Mineshafts</label>
+
+    <label><input type="checkbox" id="darkmode"> Mode sombre</label>
+
+    <div id="coords">X: 0 | Z: 0</div>
+</header>
+
+<div id="map"></div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
